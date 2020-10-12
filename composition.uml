@@ -29,6 +29,16 @@ ClueZone *--> Slot_collection
 Pieces *-- DeathPiece
 Pieces *-- HurtPiece
 
+DeathPiece *-- Red
+DeathPiece *-- White
+
+HurtPiece *-- Blue
+HurtPiece *-- Green
+HurtPiece *-- Yellow
+HurtPiece *-- Pink
+HurtPiece *-- Brown
+HurtPiece *-- Purple
+
 Player *-- Turn
 
 @enduml
