@@ -1,0 +1,34 @@
+@startuml
+
+class Mastermind
+class Board
+class Pieces
+class Players
+
+Players <|-- Decoder
+Players <|-- Coder
+Players --> Board
+Players --> Pieces
+
+Mastermind *-- Rules
+Mastermind *-- Board
+Mastermind *-- Pieces
+Mastermind *-- Player
+
+Player --> Rules
+
+Board *-- Shield
+Board *-- PlayZone
+Board *-- ClueZone
+
+Shield *-- Slot
+
+PlayZone *--> Slot_collection
+ClueZone *--> Slot_collection
+
+Pieces *-- DeathPiece
+Pieces *-- HurtPiece
+
+Player *-- Turn
+
+@enduml
